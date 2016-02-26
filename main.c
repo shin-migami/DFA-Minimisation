@@ -1,4 +1,7 @@
-#include<stdio.h>
+//Originally written by Suvojit Manna
+//Edited by Somnath Rakshit
+
+//edited by Susmita Dutta#include<stdio.h>
 
 #define MAX_STATE 26
 #define MAX_PART 10
@@ -48,14 +51,14 @@ void input_state_table(int *stateCount)
     char cState,nState0,nState1,out0,out1;
 
     printf("Enter No of States : ");
-    scanf("%d",stateCount);
+    scanf("%d\n",stateCount);
     printf("Enter space separated values in format \
         \nCurrent State  Next State(x=0)  Output(x=0)  Next State(x=1)  Output(x=1)\
         \n    (char)         (char)          (int)         (char)         (int)\n");
     for(i=0; i<*stateCount; ++i)
     {
         fflush(stdin);
-        scanf("%c %c %c %c %c",&cState,&nState0,&out0,&nState1,&out1);
+        scanf("%c %c %c %c %c\n",&cState,&nState0,&out0,&nState1,&out1);
         stateTable[i].pState = cState;
         stateTable[i].nextState[0] = nState0;
         stateTable[i].nextState[1] = nState1;
@@ -214,7 +217,7 @@ int successive_partition(int stateCount)
                                         ++groupChart[i].groupCount;
                                         ++groupChart[i].groupMax;
                                     }
-                                    groupChart[i].groupAssign[m] = groupChart[i].groupMax;
+    //commentline1                                groupChart[i].groupAssign[m] = groupChart[i].groupMax;
                                 }
                             }
                         }
