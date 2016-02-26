@@ -1,2 +1,2 @@
 # DFA-Minimisation
-DKK Assignment
+Automata assignment given by Dr. Diapk Kumar Kole
